@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  FB - Viennoiserie
+{% endblock %}
+
+{% block body %}
+  <div class="titre">
+    <h1>
+      {{ controller_name }}!
+    </h1>
+  </div>
+  <nav>
+    <ul>
+      <li class="menu-deroulant">
+        <a href="#">Nos produits</a>
+        <ul class="sous-menu">
+          <li><a href="{{ path('app_patisserie') }}">Pâtisserie</a></li>
+          <li><a href="{{ path('app_viennoiserie') }}">Viennoiserie</a></li>
+          <li><a href="#">Traiteur</a></li>
+          <li><a href="#">Gâteaux</a></li>
+        </ul>
+      </li>
+      <li class="menu-deroulant">
+        <a href="#">Évènement</a>
+        <ul class="sous-menu">
+          <li><a href="#">Fêtes</a></li>
+          <li><a href="#">Mariages/Baptêmes</a></li>
+          <li><a href="#">Anniversaires</a></li>
+        </ul>
+      </li>
+      <li><a href="/test2/caroussel-controles/index.html">À propos</a></li>
+      <li><a href="#">Contactez-nous</a></li>
+    </ul>
+  </nav>
+{% endblock %}
