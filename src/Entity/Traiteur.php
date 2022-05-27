@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\PatisserieRepository;
+use App\Repository\TraiteurRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: PatisserieRepository::class)]
-class Patisserie
+#[ORM\Entity(repositoryClass: TraiteurRepository::class)]
+class Traiteur
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -14,10 +14,10 @@ class Patisserie
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private $Name;
 
-    #[ORM\Column(type: 'string', length: 2500)]
-    private $description;
+    #[ORM\Column(type: 'string', length: 255)]
+    private $Description;
 
     #[ORM\Column(type: 'string', length: 1000)]
     private $Allergene;
@@ -35,24 +35,24 @@ class Patisserie
 
     public function getName(): ?string
     {
-        return $this->name;
+        return $this->Name;
     }
 
-    public function setName(string $name): self
+    public function setName(string $Name): self
     {
-        $this->name = $name;
+        $this->Name = $Name;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->description;
+        return $this->Description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(string $Description): self
     {
-        $this->description = $description;
+        $this->Description = $Description;
 
         return $this;
     }

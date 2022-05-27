@@ -22,6 +22,12 @@ class Viennoiserie
     #[ORM\Column(type: 'string', length: 1000)]
     private $allergene;
 
+    #[ORM\Column(type: 'integer', length: 10)]
+    private $Prix;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +65,30 @@ class Viennoiserie
     public function setAllergene(string $allergene): self
     {
         $this->allergene = $allergene;
+
+        return $this;
+    }
+
+    public function getPrix(): ?int
+    {
+        return $this->Prix;
+    }
+
+    public function setPrix(int $Prix): self
+    {
+        $this->Prix = $Prix;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
