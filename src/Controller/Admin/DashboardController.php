@@ -56,6 +56,8 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
+        yield MenuItem::linkToRoute('Aller sur le site', 'fa fa-undo', 'app_index');
+
         yield MenuItem::section('Produits');
 
         yield MenuItem::subMenu('Pâtisserie', 'fas fa-bar')->setSubItems([

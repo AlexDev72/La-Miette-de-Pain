@@ -28,6 +28,9 @@ class Traiteur
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
 
+    #[ORM\Column(type: 'boolean')]
+    private $Active;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Traiteur
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function isActive(): ?bool
+    {
+        return $this->Active;
+    }
+
+    public function setActive(bool $Active): self
+    {
+        $this->Active = $Active;
 
         return $this;
     }

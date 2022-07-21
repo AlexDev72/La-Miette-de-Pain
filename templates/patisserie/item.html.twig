@@ -1,0 +1,15 @@
+{% set patisserie_show = path('patisserie_show', {'patisserie_show' : patisserie}) %}
+{% extends 'base.html.twig' %}
+
+{% block title %}FB - Pâtisserie {% endblock %}
+
+{% block body %}
+
+
+
+    <img width= 250px height=250px src="upload/images/Patisserie/{{ patisserie.image }}">
+    <h2>{{ patisserie.name }}</h2>
+    {{ patisserie.description }}
+
+
+{% endblock %}

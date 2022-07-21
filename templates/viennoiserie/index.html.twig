@@ -1,3 +1,5 @@
+{% set viennoiserie_show = path('viennoiserie_show', {'viennoiserie_show' : viennoiserie}) %}
+
 {% extends 'base.html.twig' %}
 
 {% block title %}
@@ -15,8 +17,8 @@
       <li class="menu-deroulant">
         <a href="#">Nos produits</a>
         <ul class="sous-menu">
-          <li><a href="{{ path('app_patisserie') }}">Pâtisserie</a></li>
-          <li><a href="{{ path('app_viennoiserie') }}">Viennoiserie</a></li>
+          <li><a href="{{ path('patisserie_show') }}">Pâtisserie</a></li>
+          <li><a href="{{ path('viennoiserie_show') }}">Viennoiserie</a></li>
           <li><a href="#">Traiteur</a></li>
           <li><a href="#">Gâteaux</a></li>
         </ul>

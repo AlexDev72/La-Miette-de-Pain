@@ -4,9 +4,11 @@ namespace App\Controller\Admin;
 
 use App\Entity\Traiteur;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 
@@ -23,14 +25,15 @@ class TraiteurCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id')->hideOnForm(),
-            TextField::new('Name'),
-            MoneyField::new('Prix')->setCurrency('EUR'),
-            TextEditorField::new('description'),
-            TextEditorField::new('allergene'),
-            ImageField::new('image')
+            yield  IdField::new('id')->hideOnForm(),
+            yield  TextField::new('Name', 'Nom'),
+            yield  MoneyField::new('Prix')->setCurrency('EUR'),
+            yield  TextEditorField::new('description'),
+            yield  TextEditorField::new('allergene'),
+            yield ImageField::new('image')
                 ->setBasePath(self::PRODUCTS_BASE_PATH)
                 ->setUploadDir(self::PRODUCTS_UPLOAD_DIR),
+            yield     BooleanField::new('Active'),
         ];
     }
 }

@@ -28,6 +28,12 @@ class Patisserie
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
 
+    #[ORM\Column(type: 'boolean')]
+    private $Active;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $Slug;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -91,5 +97,33 @@ class Patisserie
         $this->image = $image;
 
         return $this;
+    }
+
+    public function isActive(): ?bool
+    {
+        return $this->Active;
+    }
+
+    public function setActive(bool $Active): self
+    {
+        $this->Active = $Active;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->Slug;
+    }
+
+    public function setSlug(string $Slug): self
+    {
+        $this->Slug = $Slug;
+
+        return $this;
+    }
+
+    public function __toString(): string {
+        return $this->name;
     }
 }

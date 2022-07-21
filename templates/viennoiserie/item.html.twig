@@ -1,0 +1,15 @@
+{% set viennoiserie_show = path('viennoiserie_show', {'viennoiserie_show' : viennoiserie}) %}
+{% extends 'base.html.twig' %}
+
+{% block title %}FB - Viennoiserie {% endblock %}
+
+{% block body %}
+
+
+
+    <img width= 250px height=250px src="upload/images/Viennoiserie/{{viennoiserie.image }}">
+    <h2>{{viennoiserie.name }}</h2>
+    {{ viennoiserie.description }}
+
+
+{% endblock %}

@@ -6,17 +6,17 @@
 <body>
 
 <div class="titre">
-    <h1>{{ controller_name }}! </h1>
+    <h1>{{ controller_name }} </h1>
 </div>
   <nav>
         <ul>
           <li class="menu-deroulant">
             <a href="#">Nos produits</a>
             <ul class="sous-menu">
-              <li><a href="{{ path ('app_patisserie')}}">Pâtisserie</a></li>
-              <li><a href="{{ path ('app_viennoiserie')}}">Viennoiserie</a></li>
+                <li><a href="{{ path ('patisserie_show')}}">Patisseries</a></li>
+              <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
               <li><a href="#">Traiteur</a></li>
-              <li><a href="#">Gâteaux</a></li>
+                <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
             </ul>
           </li>
           <li class="menu-deroulant">
@@ -104,7 +104,7 @@
       </div>  
       <div class="grid-item4">
         <h7>En savoir plus</h7> <br><br>
-        <p >Qui somme nous?<br>
+        <p>Qui somme nous?<br>
          Nous contacter<br>
          Notre histoire<br>
          Plus d'info</p>
