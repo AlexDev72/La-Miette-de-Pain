@@ -10,26 +10,28 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PatisserieController extends AbstractController
 {
-    #[Route('/patisserie', name: 'patisserie_show')]
+    #[Route('/patisseries', name: 'patisserie_liste')]
+    public function liste(PatisserieRepository $patisserieRepo){
+        return $this->render("patisserie/list.html.twig" , [
+            "patisseries" => $patisserieRepo->findAll(),
+
+        ]);
+
+    }
+
+    #[Route('/patisserie/{Slug}', name: 'patisserie_show')]
     public function show(Patisserie $patisserie): Response
     {
         if(!$patisserie){
             return $this->redirectToRoute('app_home');
         }
 
-        return $this->render('patisserie/list.html.twig', [
+        return $this->render('patisserie/detail.html.twig', [
             'controller_name' => 'La Miette de Pain',
             'patisserie' => $patisserie,
         ]);
     }
 
-#[Route('/patisseries', name: 'patisserie_show')]
-public function liste(PatisserieRepository $patisserieRepo){
-        return $this->render("patisserie/list.html.twig" , [
-            "patisseries" => $patisserieRepo->findAll(),
 
-        ]);
-
-}
 
 }

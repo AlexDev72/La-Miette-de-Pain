@@ -1,6 +1,49 @@
+
 .produit{
     padding: 5%;
     display: grid;
     grid-template-columns: auto auto auto auto;
     max-width: 100%;
+}
+
+.image {
+    width: 60%;
+    height: 100%;
+    object-fit:cover;
+
+    /*-webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);*/
+
+    transform-origin:center;
+    transform:perspective(800px) rotateY(10deg);
+    transition:0.5s;
+}
+.container {
+    max-width:600px;
+    max-height:350px;
+
+}
+
+.container img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+}
+
+.nom{
+    padding-top:5%;
+    font-size: 120%;
+}
+
+.item {
+    display: grid;
+    padding-top: 5%;
+    padding-left: 5%;
+    grid-template-columns: auto auto;
+
+}
+
+.allergene{
+    margin-top:20%;
+}
+.titre{
+    margin-right:60%;
 }

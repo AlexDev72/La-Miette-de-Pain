@@ -5,18 +5,20 @@
 {% block body %}
 <body>
 
-    <h1>La Miette de Pain</h1>
-
-<nav>
-    <ul>
-        <li class="menu-deroulant">
+<div class="titre">
+    <h1>{{ controller_name }}! </h1>
+</div>
+  <nav>
+        <ul>
+          <li class="menu-deroulant">
             <a href="#">Nos produits</a>
             <ul class="sous-menu">
-                <li><a href="{{ path ('patisserie_liste')}}">Patisseries</a></li>
-                <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
-                <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
+              <li><a href="{{ path ('app_patisserie')}}">Pâtisserie</a></li>
+              <li><a href="{{ path ('app_viennoiserie')}}">Viennoiserie</a></li>
+              <li><a href="#">Traiteur</a></li>
+              <li><a href="#">Gâteaux</a></li>
             </ul>
-        </li>
+          </li>
           <li class="menu-deroulant">
             <a href="#">Évènement</a>
             <ul class="sous-menu">
@@ -32,13 +34,13 @@
   
     <main>
       
-      <section id="slider">
+     {# <section id="slider"> 
       
-          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">
+          <img src="" alt="La forêt de peupliers" id="slide">
           <div id="precedent" onclick="ChangeSlide(-1)"><</div>
           <div id="suivant" onclick="ChangeSlide(1)">></div>
      
-         </section>
+         </section> #}
 
       <section class="description">
         <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
@@ -46,10 +48,10 @@
            quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
           </p>
         <figure class="deco">
-          <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
+          <img src="#" alt="Lamiettedepain"class="image1">
         </figure>
         <figure class="gateau">
-        <img src="./slider/vitrine.png" alt="Lamiettedepain"class="image1">
+        <img src="#" alt="Lamiettedepain"class="image1">  
     </figure>
     <p class="texte">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -61,22 +63,22 @@
       <div class="selection">
        
       <figure >
-        <img src="./slider/mdp.png" alt="Lamiettedepain"class="images">
+        <img src="#" alt="Lamiettedepain"class="images">
         <figcaption>La miette de Pain</figcaption>
     </figure>
 
     <figure id="Nossproduits" >
-        <a href="{{ path ('patisserie_liste')}}"><img src="./slider/vitrine.png" alt="Nosproduits"class="images"></a>
+        <a href="#"><img src="#" alt="Nosproduits"class="images"></a>
         <figcaption>Nos produits</figcaption>
     </figure>
 
     <figure id="Evenement" >
-        <img src="./slider/gateau.png" alt="Evenement"class="images">
+        <img src="#" alt="Evenement"class="images">
         <figcaption>Évènement</figcaption>
     </figure >
 
     <figure id="Nousrejoindre" >
-        <img src="./slider/slider.png" alt="Cadeau"class="images">
+        <img src="#" alt="Cadeau"class="images">
         <figcaption>Nous rejoindres</figcaption>
     </figure>
   
@@ -96,13 +98,13 @@
     
       <div class="grid-item3">
         <h7>Catégories</h7><br><br>
-          <a href="{{ path ('patisserie_liste')}}" >Pâtisserie</a><br>
+        <p >Pâtisserie<br>
         Boulangerie<br>
-       Évènement</a>
+       Évènement</p>
       </div>  
       <div class="grid-item4">
         <h7>En savoir plus</h7> <br><br>
-        <p>Qui somme nous?<br>
+        <p >Qui somme nous?<br>
          Nous contacter<br>
          Notre histoire<br>
          Plus d'info</p>

@@ -1,17 +1,16 @@
-{% set patisserie_show = path('patisserie_show', {'patisserie_show' : patisserie}) %}
+{% set patisserie_liste = path('patisserie_liste', {'Slug' : patisserie}) %}
 
 
 {% block body %}
-    <div>
-        <div>
 
-            <img width= 300px height=250px src="upload/images/Patisserie/{{ patisserie.image }}">
+        <div class="container">
 
-            <h2>{{ patisserie.name }}</h2>
+            <a href="{{ path ('patisserie_show', {'Slug':patisserie.Slug} )}}">
+                <img class="image" width= 300px height=250px src="upload/images/Patisserie/{{ patisserie.image }}">
+            </a>
 
-            <p>
-                {{ (patisserie.prix/100)|number_format(2) }}  €
-            </p>
+            <h2 class="nom">{{ patisserie.name }}</h2>
+
         </div>
-    </div>
+
 {% endblock %}
