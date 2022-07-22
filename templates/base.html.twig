@@ -23,9 +23,62 @@
     {% block javascripts %}
        {{ encore_entry_script_tags('app') }} 
     {% endblock %}
-
+  </head>
+  <body>
+  {% block header %}
+    <div class="titre">
+      <h1><a href="{{ path ('app_index')}}"> La Miette de Pain</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li class="menu-deroulant">
+          <a href="#">Nos produits</a>
+          <ul class="sous-menu">
+            <li><a href="{{ path ('patisserie_liste')}}">Pâtisseries</a></li>
+            <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
+            <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
+          </ul>
+        </li>
+        <li class="menu-deroulant">
+          <a href="#">Évènement</a>
+          <ul class="sous-menu">
+            <li><a href="#">Fêtes</a></li>
+            <li><a href="#">Mariages/Baptêmes</a></li>
+            <li><a href="#">Anniversaires</a></li>
+          </ul>
+        </li>
+        <li><a href="/test2/caroussel-controles/index.html">À propos</a></li>
+        <li><a href="#">Contactez-nous</a></li>
+      </ul>
+    </nav>
+  {% endblock %}
   {% block body %}
 
-    {% endblock %}
+  {% endblock %}
+  <footer>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <p class="texte3">
+          55456454454445Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+          Autem laborum hic quisquam fuga, ipsa quia quasi suscipit <br>
+          incidunt laboriosam veniam modi et? Similique optio<br>
+          reprehenderit, quae beatae excepturi nesciunt. Repudiandae.
+        </p></div>
+
+      <div class="grid-item3">
+        <h7>Catégories</h7><br><br>
+        <a href="{{ path ('patisserie_liste')}}" >Pâtisserie</a><br>
+        Boulangerie<br>
+        Évènement</a>
+      </div>
+      <div class="grid-item4">
+        <h7>En savoir plus</h7> <br><br>
+        <p>Qui somme nous?<br>
+          Nous contacter<br>
+          Notre histoire<br>
+          Plus d'info</p>
+      </div>
+  </footer>
   </body>
 </html>

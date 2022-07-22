@@ -3,33 +3,6 @@
 {% block title %}FB - Pâtisserie {% endblock %}
 {% block body %}
 
-    <div class="titre">
-        <h1><a href="{{ path ('app_index')}}"> La Miette de Pain</a></h1>
-    </div>
-    <nav>
-        <ul>
-            <li class="menu-deroulant">
-                <a href="#">Nos produits</a>
-                <ul class="sous-menu">
-                    <li><a href="{{ path ('patisserie_liste')}}">Pâtisserie</a></li>
-                    <li><a href="{{ path ('viennoiserie_show')}}">Viennoiserie</a></li>
-                    <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
-                </ul>
-            </li>
-            <li class="menu-deroulant">
-                <a href="#">Évènement</a>
-                <ul class="sous-menu">
-                    <li><a href="#">Fêtes</a></li>
-                    <li><a href="#">Mariages/Baptêmes</a></li>
-                    <li><a href="#">Anniversaires</a></li>
-                </ul>
-            </li>
-            <li><a href="/test2/caroussel-controles/index.html">À propos</a></li>
-            <li><a href="#">Contactez-nous</a></li>
-        </ul>
-    </nav>
-
-
     <div class="produit">
     {% for patisserie in patisseries %}
 
