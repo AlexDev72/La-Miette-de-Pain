@@ -1,4 +1,3 @@
-
 {% block body %}
     <div class="titre">
         <h1><a href="{{ path ('app_index')}}"> La Miette de Pain</a></h1>
@@ -10,7 +9,6 @@
                 <ul class="sous-menu">
                     <li><a href="{{ path ('patisserie_show')}}">Pâtisseries</a></li>
                     <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
-                    <li><a href="#">Traiteur</a></li>
                     <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
                 </ul>
             </li>
@@ -26,8 +24,10 @@
             <li><a href="#">Contactez-nous</a></li>
         </ul>
     </nav>
+
+    {% for viennoiserie in viennoiseries %}
+        {% include 'viennoiserie/item.html.twig' with { viennoiserie } %}
+    {% endfor %}
+
 {% endblock %}
 
-{% for viennoiserie in viennoiseries %}
-    {% include 'viennoiserie/item.html.twig' with { viennoiserie } %}
-{% endfor %}

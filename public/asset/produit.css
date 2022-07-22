@@ -1,0 +1,6 @@
+.produit{
+    padding: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    max-width: 100%;
+}

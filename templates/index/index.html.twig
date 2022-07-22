@@ -5,20 +5,18 @@
 {% block body %}
 <body>
 
-<div class="titre">
-    <h1>{{ controller_name }} </h1>
-</div>
-  <nav>
-        <ul>
-          <li class="menu-deroulant">
+    <h1>La Miette de Pain</h1>
+
+<nav>
+    <ul>
+        <li class="menu-deroulant">
             <a href="#">Nos produits</a>
             <ul class="sous-menu">
                 <li><a href="{{ path ('patisserie_show')}}">Patisseries</a></li>
-              <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
-              <li><a href="#">Traiteur</a></li>
+                <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
                 <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
             </ul>
-          </li>
+        </li>
           <li class="menu-deroulant">
             <a href="#">Évènement</a>
             <ul class="sous-menu">
@@ -34,13 +32,13 @@
   
     <main>
       
-     {# <section id="slider"> 
+      <section id="slider">
       
-          <img src="" alt="La forêt de peupliers" id="slide">
+          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">
           <div id="precedent" onclick="ChangeSlide(-1)"><</div>
           <div id="suivant" onclick="ChangeSlide(1)">></div>
      
-         </section> #}
+         </section>
 
       <section class="description">
         <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
@@ -48,10 +46,10 @@
            quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
           </p>
         <figure class="deco">
-          <img src="#" alt="Lamiettedepain"class="image1">
+          <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
         </figure>
         <figure class="gateau">
-        <img src="#" alt="Lamiettedepain"class="image1">  
+        <img src="./slider/vitrine.png" alt="Lamiettedepain"class="image1">
     </figure>
     <p class="texte">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -63,22 +61,22 @@
       <div class="selection">
        
       <figure >
-        <img src="#" alt="Lamiettedepain"class="images">
+        <img src="./slider/mdp.png" alt="Lamiettedepain"class="images">
         <figcaption>La miette de Pain</figcaption>
     </figure>
 
     <figure id="Nossproduits" >
-        <a href="#"><img src="#" alt="Nosproduits"class="images"></a>
+        <a href="{{ path ('patisserie_show')}}"><img src="./slider/vitrine.png" alt="Nosproduits"class="images"></a>
         <figcaption>Nos produits</figcaption>
     </figure>
 
     <figure id="Evenement" >
-        <img src="#" alt="Evenement"class="images">
+        <img src="./slider/gateau.png" alt="Evenement"class="images">
         <figcaption>Évènement</figcaption>
     </figure >
 
     <figure id="Nousrejoindre" >
-        <img src="#" alt="Cadeau"class="images">
+        <img src="./slider/slider.png" alt="Cadeau"class="images">
         <figcaption>Nous rejoindres</figcaption>
     </figure>
   
@@ -98,9 +96,9 @@
     
       <div class="grid-item3">
         <h7>Catégories</h7><br><br>
-        <p >Pâtisserie<br>
+          <a href="{{ path ('patisserie_show')}}" >Pâtisserie</a><br>
         Boulangerie<br>
-       Évènement</p>
+       Évènement</a>
       </div>  
       <div class="grid-item4">
         <h7>En savoir plus</h7> <br><br>

@@ -17,7 +17,7 @@ class PatisserieController extends AbstractController
             return $this->redirectToRoute('app_home');
         }
 
-        return $this->render('patisserie/index.html.twig', [
+        return $this->render('patisserie/list.html.twig', [
             'controller_name' => 'La Miette de Pain',
             'patisserie' => $patisserie,
         ]);

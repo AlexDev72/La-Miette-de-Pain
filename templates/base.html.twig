@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link href="/asset/style.css" rel="stylesheet" />
+    <link href="/asset/style.css" rel="stylesheet"/>
+    <link href="/asset/produit.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
     <title>
       {% block title %}
         Welcome!
@@ -18,9 +22,9 @@
     {% block javascripts %}
        {{ encore_entry_script_tags('app') }} 
     {% endblock %}
-  </head>
-  <body>
-    {% block body %}
+
+  {% block body %}
+
     {% endblock %}
   </body>
 </html>

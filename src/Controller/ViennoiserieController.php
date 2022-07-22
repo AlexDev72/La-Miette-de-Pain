@@ -17,7 +17,7 @@ class ViennoiserieController extends AbstractController
             return $this->redirectToRoute('app_home');
         }
 
-        return $this->render('viennoiserie/index.html.twig', [
+        return $this->render('viennoiserie/list.html.twig', [
             'controller_name' => 'La Miette de Pain',
             'viennoiserie' => $viennoiserie,
         ]);

@@ -1,6 +1,6 @@
 //slider//
 
-var slide = new Array('', '', '')
+var slide = new Array('slider.png', '', '')
 var numero = 0
 
 function ChangeSlide(sens) {
