@@ -23,9 +23,35 @@
     {% block javascripts %}
        {{ encore_entry_script_tags('app') }} 
     {% endblock %}
-
+  </head>
+  <body>
   {% block body %}
 
-    {% endblock %}
+  {% endblock %}
+  <footer>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <p class="texte3">
+          55456454454445Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+          Autem laborum hic quisquam fuga, ipsa quia quasi suscipit <br>
+          incidunt laboriosam veniam modi et? Similique optio<br>
+          reprehenderit, quae beatae excepturi nesciunt. Repudiandae.
+        </p></div>
+
+      <div class="grid-item3">
+        <h7>Catégories</h7><br><br>
+        <a href="{{ path ('patisserie_liste')}}" >Pâtisserie</a><br>
+        Boulangerie<br>
+        Évènement</a>
+      </div>
+      <div class="grid-item4">
+        <h7>En savoir plus</h7> <br><br>
+        <p>Qui somme nous?<br>
+          Nous contacter<br>
+          Notre histoire<br>
+          Plus d'info</p>
+      </div>
+  </footer>
   </body>
 </html>
