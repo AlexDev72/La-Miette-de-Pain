@@ -10,20 +10,20 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ViennoiserieController extends AbstractController
 {
-    #[Route('/viennoiserie', name: 'viennoiserie_show')]
+    #[Route('/viennoiserie/{Slug}', name: 'viennoiserie_show')]
     public function show(Viennoiserie $viennoiserie): Response
     {
         if (!$viennoiserie) {
             return $this->redirectToRoute('app_home');
         }
 
-        return $this->render('viennoiserie/list.html.twig', [
+        return $this->render('viennoiserie/detail.html.twig', [
             'controller_name' => 'La Miette de Pain',
             'viennoiserie' => $viennoiserie,
         ]);
     }
 
-    #[Route('/viennoiseries', name: 'viennoiserie_show')]
+    #[Route('/viennoiseries', name: 'viennoiserie_liste')]
     public function liste(ViennoiserieRepository $viennoiserieRepo): Response
     {
         return $this->render('viennoiserie/list.html.twig', [

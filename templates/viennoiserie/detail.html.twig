@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% set viennoiserie_show = path('viennoiserie_show', {'Slug' : viennoiserie.Slug}) %}
+
+{% block title %}FB - Viennoiserie {% endblock %}
+
+
+{% block body %}
+    <div class="item">
+
+
+        <div >
+            <img width= 550px height=500px src="upload/images/Patisserie/{{ viennoiserie.image }}">
+        </div>
+        <div class="titre">
+            <h2>{{ viennoiserie.name }}</h2>
+            <p class="allergene"> {{ viennoiserie.allergene }}</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}FB - Traiteur {% endblock %}
+{% block body %}
+
+    <div class="produit">
+
+        {% for traiteur in traiteurs %}
+
+            {% include 'traiteur/item.html.twig' with { traiteur } %}
+        {% endfor %}
+    </div>
+{% endblock %}

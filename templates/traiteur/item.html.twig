@@ -1,0 +1,14 @@
+{% set traiteur_liste = path('traiteur_liste', {'Slug' : traiteur}) %}
+
+
+{% block body %}
+    <div>
+        <div>
+            <a href="{{ path ('traiteur_show', {'Slug':traiteur.Slug} )}}">
+                <img width= 300px height=250px src="upload/images/traiteur/{{ traiteur.image }}">
+            </a>
+            <h2>{{ traiteur.name }}</h2>
+
+        </div>
+    </div>
+{% endblock %}

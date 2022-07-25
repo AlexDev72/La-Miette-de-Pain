@@ -34,6 +34,8 @@ class TraiteurCrudController extends AbstractCrudController
                 ->setBasePath(self::PRODUCTS_BASE_PATH)
                 ->setUploadDir(self::PRODUCTS_UPLOAD_DIR),
             yield     BooleanField::new('Active'),
+            yield  SlugField::new('Slug')
+                ->setTargetFieldName('Name'),
         ];
     }
 }

@@ -1,12 +1,12 @@
-{% set viennoiserie_show = path('viennoiserie_show', {'viennoiserie_show' : viennoiserie}) %}
+{% set viennoiserie_liste = path('viennoiserie_liste', {'Slug' : viennoiserie}) %}
 
 
 {% block body %}
     <div>
         <div>
-
-            <img width= 300px height=250px src="upload/images/Patisserie/{{ viennoiserie.image }}">
-
+            <a href="{{ path ('viennoiserie_show', {'Slug':viennoiserie.Slug} )}}">
+            <img width= 300px height=250px src="upload/images/Viennoiserie/{{ viennoiserie.image }}">
+            </a>
             <h2>{{ viennoiserie.name }}</h2>
 
         </div>

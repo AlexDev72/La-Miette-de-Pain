@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="./slider/fb.png">
+    <script src="https://kit.fontawesome.com/3831f62a35.js" crossorigin="anonymous"></script>
     <title>
       {% block title %}
         Welcome!
@@ -26,17 +27,19 @@
   </head>
   <body>
   {% block header %}
-    <div class="titre">
+
+    <header>
+      <img width=5% heigth=5% src="/slider/fb.png">
       <h1><a href="{{ path ('app_index')}}"> La Miette de Pain</a></h1>
-    </div>
+    </header>
     <nav>
       <ul>
         <li class="menu-deroulant">
           <a href="#">Nos produits</a>
           <ul class="sous-menu">
             <li><a href="{{ path ('patisserie_liste')}}">Pâtisseries</a></li>
-            <li><a href="{{ path ('viennoiserie_show')}}">Viennoiseries</a></li>
-            <li><a href="{{ path ('boulangeries_show')}}">Boulangerie</a></li>
+            <li><a href="{{ path ('viennoiserie_liste')}}">Viennoiseries</a></li>
+            <li><a href="{{ path ('traiteur_liste')}}">Traiteur</a></li>
           </ul>
         </li>
         <li class="menu-deroulant">
@@ -69,15 +72,21 @@
       <div class="grid-item3">
         <h7>Catégories</h7><br><br>
         <a href="{{ path ('patisserie_liste')}}" >Pâtisserie</a><br>
-        Boulangerie<br>
-        Évènement</a>
+        <a href="{{ path ('viennoiserie_liste')}}" >Viennoiserie<br>
+          <a href="{{ path ('traiteur_liste')}}" >Traiteur</a>
       </div>
       <div class="grid-item4">
-        <h7>En savoir plus</h7> <br><br>
-        <p>Qui somme nous?<br>
+        <p>
           Nous contacter<br>
-          Notre histoire<br>
-          Plus d'info</p>
+          Pour plus d'information et pour suivre toute les actualités <br> de La Miette de Pain <br><br>
+          <i class="fab fa-facebook-square">
+          <a href="https://fr-fr.facebook.com/Lamiettedepainvarades/">Facebook</a>
+          </i>
+          <br>
+          <i class="fab fa-instagram">
+            Instagram
+          </i>
+         </p>
       </div>
   </footer>
   </body>

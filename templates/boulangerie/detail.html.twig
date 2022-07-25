@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% set boulangerie_show = path('boulangerie_show', {'Slug' : boulangerie.Slug}) %}
+
+{% block title %}FB - Pâtisserie {% endblock %}
+
+
+{% block body %}
+    <div class="item">
+
+        <div >
+            <img width= 550px height=500px src="upload/images/Patisserie/{{ boulangerie.image }}">
+
+        </div>
+        <div class="titre">
+            <h2>{{ boulangerie.name }}</h2>
+            <p class="allergene"> {{ boulangerie.allergene }}</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

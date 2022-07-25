@@ -31,6 +31,9 @@ class Traiteur
     #[ORM\Column(type: 'boolean')]
     private $Active;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $Slug;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,22 @@ class Traiteur
     public function setActive(bool $Active): self
     {
         $this->Active = $Active;
+
+        return $this;
+    }
+
+//    public function __toString(): string {
+//        return $this->name;
+//    }
+
+    public function getSlug(): ?string
+    {
+        return $this->Slug;
+    }
+
+    public function setSlug(string $Slug): self
+    {
+        $this->Slug = $Slug;
 
         return $this;
     }

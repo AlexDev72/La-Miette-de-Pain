@@ -14,14 +14,20 @@
     padding: 0px;
     font-family: 'BIZ UDMincho', serif;
 }
+
 a{
+    text-decoration:none;
+    color:white;
+}
+h1 a{
     text-decoration: none;
     color: black;
 }
+
 h1{
 
     padding: 2% 0% 2% 0%;
-    font-size: 400%;
+    font-size: 300%;
     font-family: 'BIZ UDMincho', serif;
     color: black;
 
@@ -272,7 +278,7 @@ h1{
         text-align: center;
         display: grid;
         grid-template-columns: auto auto auto auto;
-        padding: 5% 15%;
+        padding: 5% 2%;
         border-top: solid 1px #89d006;
         color: white;
     }

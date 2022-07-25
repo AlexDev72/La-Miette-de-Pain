@@ -36,9 +36,8 @@
 .item {
     display: grid;
     padding-top: 5%;
-    padding-left: 5%;
     grid-template-columns: auto auto;
-
+padding-bottom: 5%;
 }
 
 .allergene{
