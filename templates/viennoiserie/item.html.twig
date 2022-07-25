@@ -2,13 +2,16 @@
 
 
 {% block body %}
-    <div>
+    <div class="produit">
         <div>
             <a href="{{ path ('viennoiserie_show', {'Slug':viennoiserie.Slug} )}}">
-            <img width= 300px height=250px src="upload/images/Viennoiserie/{{ viennoiserie.image }}">
+            <img class="image" width= 300px height=250px src="upload/images/Viennoiserie/{{ viennoiserie.image }}">
             </a>
             <h2>{{ viennoiserie.name }}</h2>
 
         </div>
     </div>
+
+
+
 {% endblock %}
