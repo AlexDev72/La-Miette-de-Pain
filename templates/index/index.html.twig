@@ -6,13 +6,13 @@
 
     <main>
       
-      <section id="slider">
-      
-          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">
-          <div id="precedent" onclick="ChangeSlide(-1)"><</div>
-          <div id="suivant" onclick="ChangeSlide(1)">></div>
-     
-         </section>
+{#      <section id="slider">#}
+{#      #}
+{#          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">#}
+{#          <div id="precedent" onclick="ChangeSlide(-1)"><</div>#}
+{#          <div id="suivant" onclick="ChangeSlide(1)">></div>#}
+{#     #}
+{#         </section>#}
 
       <section class="description">
         <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
@@ -57,30 +57,5 @@
     </div>
     </main>
 
-    <footer>
-      <div class="grid-container">
-      
-        <div class="grid-item">
-        <p class="texte3"> 
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-         Autem laborum hic quisquam fuga, ipsa quia quasi suscipit <br>
-         incidunt laboriosam veniam modi et? Similique optio<br>
-          reprehenderit, quae beatae excepturi nesciunt. Repudiandae.
-        </p></div>
-    
-      <div class="grid-item3">
-        <h7>Catégories</h7><br><br>
-          <a href="{{ path ('patisserie_liste')}}" >Pâtisserie</a><br>
-        Boulangerie<br>
-       Évènement</a>
-      </div>  
-      <div class="grid-item4">
-        <h7>En savoir plus</h7> <br><br>
-        <p>Qui somme nous?<br>
-         Nous contacter<br>
-         Notre histoire<br>
-         Plus d'info</p>
-      </div>
-    </footer>
     <script src="/asset/js.js" defer></script>
 {% endblock %}

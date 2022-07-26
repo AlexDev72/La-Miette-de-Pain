@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link href="/asset/style.css" rel="stylesheet"/>
+    <link href="/asset/form.css" rel="stylesheet"/>
     <link href="/asset/produit.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,19 +20,32 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>" />
    
     {% block stylesheets %}
-      {{ encore_entry_link_tags('app') }} 
+      {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
     {% block javascripts %}
-       {{ encore_entry_script_tags('app') }} 
+       {{ encore_entry_script_tags('app') }}
     {% endblock %}
   </head>
   <body>
   {% block header %}
 
     <header>
-{#      <img width=5% heigth=5% src="/slider/fb.png">#}
+      {#      <img width=5% heigth=5% src="/slider/fb.png">#}
       <h1><a href="{{ path ('app_index')}}"> La Miette de Pain</a></h1>
+      <div class="d-grid gap-2 d-md-block">
+
+        {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+
+        <a id="bouton" class="btn btn-primary mt-5" type="button" href="{{ path ('app_register') }}">S'inscrire</a>
+      </div>
+      <div class="d-grid gap-2 d-md-block ">
+        <a  class="btn btn-primary mt-5 " type="button" href="{{ path ('app_login') }}">Connexion</a>
+      </div>
+    {% else %}
+      <a id="bouton" class="btn btn-primary mt-5" type="button" href="{{ path ('app_logout') }}">Déconnexion</a>
+      {% endif %}
+
     </header>
     <nav>
       <ul>
@@ -46,12 +61,11 @@
           <a href="#">Évènement</a>
           <ul class="sous-menu">
             <li><a href="#">Fêtes</a></li>
-            <li><a href="#">Mariages/Baptêmes</a></li>
-            <li><a href="#">Anniversaires</a></li>
+            <li><a href="#">Mariages/Baptêmes/Anniversaires</a></li>
           </ul>
         </li>
         <li><a href="/test2/caroussel-controles/index.html">À propos</a></li>
-        <li><a href="#">Contactez-nous</a></li>
+        <li><a href="{{ path ('app_contact') }}">Contactez-nous</a></li>
       </ul>
     </nav>
   {% endblock %}
@@ -80,7 +94,7 @@
           Nous contacter<br>
           Pour plus d'information et pour suivre toute les actualités <br> de La Miette de Pain <br><br>
           <i class="fab fa-facebook-square">
-          <a href="https://fr-fr.facebook.com/Lamiettedepainvarades/">Facebook</a>
+          <a href="https://www.facebook.com/maisonbourgine">Facebook</a>
           </i>
           <br>
           <i class="fab fa-instagram">
