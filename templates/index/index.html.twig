@@ -5,56 +5,56 @@
 {% block body %}
 
     <main>
-      
-{#      <section id="slider">#}
-{#      #}
-{#          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">#}
-{#          <div id="precedent" onclick="ChangeSlide(-1)"><</div>#}
-{#          <div id="suivant" onclick="ChangeSlide(1)">></div>#}
-{#     #}
-{#         </section>#}
 
-      <section class="description">
-        <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
-          fugiat consequatur? <br> Nesciunt nisi odit neque illo magnam facilis odio libero eos sequi,
-           quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
-          </p>
-        <figure class="deco">
-          <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
-        </figure>
-        <figure class="gateau">
-        <img src="./slider/vitrine.png" alt="Lamiettedepain"class="image1">
-    </figure>
-    <p class="texte">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-      Ipsum amet a adipisci perferendis, similique officiis magni doloremque nam, <br>
-      ad laborum exercitationem consectetur corrupti, esse quibusdam. Porro minus mollitia numquam in?
-    </p>
-      </section>
+        {#      <section id="slider">#}
+        {#      #}
+        {#          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">#}
+        {#          <div id="precedent" onclick="ChangeSlide(-1)"><</div>#}
+        {#          <div id="suivant" onclick="ChangeSlide(1)">></div>#}
+        {#     #}
+        {#         </section>#}
 
-      <div class="selection">
-       
-      <figure >
-        <img src="./slider/mdp.png" alt="Lamiettedepain"class="images">
-        <figcaption>La miette de Pain</figcaption>
-    </figure>
+        <section class="description">
+            <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
+                fugiat consequatur? <br> Nesciunt nisi odit neque illo magnam facilis odio libero eos sequi,
+                quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
+            </p>
+            <figure class="deco">
+                <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
+            </figure>
+            <figure class="gateau">
+                <img src="./slider/vitrine.png" alt="Lamiettedepain"class="image1">
+            </figure>
+            <p class="texte">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Ipsum amet a adipisci perferendis, similique officiis magni doloremque nam, <br>
+                ad laborum exercitationem consectetur corrupti, esse quibusdam. Porro minus mollitia numquam in?
+            </p>
+        </section>
 
-    <figure id="Nossproduits" >
-        <a href="{{ path ('patisserie_liste')}}"><img src="./slider/vitrine.png" alt="Nosproduits"class="images"></a>
-        <figcaption>Nos produits</figcaption>
-    </figure>
+        <div class="selection">
 
-    <figure id="Evenement" >
-        <img src="./slider/gateau.png" alt="Evenement"class="images">
-        <figcaption>Évènement</figcaption>
-    </figure >
+            <figure>
+                <img id="place"  src="./slider/mdp.png" alt="Lamiettedepain"class="images">
+                <figcaption>La miette de Pain</figcaption>
+            </figure>
 
-    <figure id="Nousrejoindre" >
-        <img src="./slider/slider.png" alt="Cadeau"class="images">
-        <figcaption>Nous rejoindres</figcaption>
-    </figure>
-  
-    </div>
+            <figure>
+                <a href="{{ path ('patisserie_liste')}}"><img id="place" src="./slider/vitrine.png" alt="Nosproduits"class="images"></a>
+                <figcaption>Nos produits</figcaption>
+            </figure>
+
+            <figure>
+                <img id="place"  src="./slider/gateau.png" alt="Evenement"class="images">
+                <figcaption>Évènement</figcaption>
+            </figure>
+
+            <figure>
+                <img id="place" src="./slider/slider.png" alt="Cadeau"class="images">
+                <figcaption>Nous rejoindres</figcaption>
+            </figure>
+
+        </div>
     </main>
 
     <script src="/asset/js.js" defer></script>

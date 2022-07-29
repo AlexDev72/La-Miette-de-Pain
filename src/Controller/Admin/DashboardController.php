@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\mariage;
 use App\Entity\Patisserie;
 use App\Entity\Traiteur;
 use App\Entity\Viennoiserie;
@@ -77,5 +78,16 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Voir les sandwich', 'fas fa-eye', Traiteur::class)
 
         ]);
+
+        yield MenuItem::subMenu('Mariage/Anniversaire', 'fas fa-bar')->setSubItems([
+            MenuItem::linkToCrud('Ajoutez une image', 'fas fa-plus', mariage::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Voir les images', 'fas fa-eye', mariage::class)
+
+        ]);
+        yield MenuItem::subMenu('Fêtes', 'fas fa-bar')->setSubItems([
+            MenuItem::linkToCrud('Ajoutez une image', 'fas fa-plus', mariage::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Voir les images', 'fas fa-eye', mariage::class)
+
+        ]) ;
     }
 }

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FB - Fêtes {% endblock %}
+{% block body %}
+
+    <div class="produit">
+        {% for image in images %}
+
+
+            {% include 'fetes/index.html.twig' with { image } %}
+
+
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

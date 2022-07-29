@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ImageRepository;
+use App\Repository\MariageRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ImageRepository::class)]
-class Image
+#[ORM\Entity(repositoryClass: MariageRepository::class)]
+class mariage
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -15,6 +15,9 @@ class Image
 
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $image;
 
     public function getId(): ?int
     {
@@ -32,4 +35,18 @@ class Image
 
         return $this;
     }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+
 }

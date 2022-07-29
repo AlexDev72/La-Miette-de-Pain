@@ -2,17 +2,27 @@
 
 namespace App\Controller;
 
+use App\Repository\MariageRepository;
+use App\Entity\mariage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class EvenementController extends AbstractController
 {
-    #[Route('/evenement', name: 'app_evenement')]
-    public function index(): Response
+    #[Route('/mariage', name: 'evenement_liste')]
+    public function liste(MariageRepository $mariageRepository)
     {
-        return $this->render('evenement/index.html.twig', [
-            'controller_name' => 'EvenementController',
+        return $this->render('mariage/index.html.twig', [
+            'mariages' => $mariageRepository->findAll(),
+        ]);
+    }
+
+    #[Route('/fêtes', name: 'fetes_liste')]
+    public function lister(MariageRepository $mariageRepository)
+    {
+        return $this->render('fetes/index.html.twig', [
+            'mariages' => $mariageRepository->findAll(),
         ]);
     }
 }

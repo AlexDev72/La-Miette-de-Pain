@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FB - Pâtisserie {% endblock %}
+{% block body %}
+
+    <div class="produit">
+        {% for mariage in mariages %}
+
+
+            {% include 'mariage/index.html.twig' with { mariage } %}
+
+
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

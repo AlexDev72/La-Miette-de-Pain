@@ -2,7 +2,9 @@
 :root {
     --hauteur-menu: 60px;
 }
-
+ul{
+    background-color:#e4e1e1ea;
+}
 #fix{
     min-height: 100vh;
     display: grid;
@@ -12,7 +14,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'BIZ UDMincho', serif;
+    font-family: 'Kalam', cursive;
 }
 header{
     display:grid;
@@ -24,11 +26,12 @@ a{
     color:white;
 }
 h1 a{
+    font-size:150%;
     text-decoration: none;
     color: black;
 }
 
-h1{
+.entete{
     margin-left:37%;
     padding: 2% 10% 2% 0%;
     font-size: 290%;
@@ -238,7 +241,7 @@ h1{
     }
     .texte {
         text-align: center;
-        padding-top: 25%;
+        padding-top: 5%;
         font-size: 120%;
     }
     .selection {
@@ -355,3 +358,7 @@ h1{
     dl, ol, ul{
     margin:0;}
 }
+figcaption{
+    font-size:200%;
+}
+p{margin:0rem;}
