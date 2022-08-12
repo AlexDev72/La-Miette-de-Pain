@@ -11,15 +11,15 @@
             <img width= 600px height=500px src="/upload/images/Patisserie/{{ patisserie.image }}">
 
 </div>
+
         <div class="titre">
         <h2>{{ patisserie.name }}</h2>
-     <p class="allergene"> {{ patisserie.allergene }} <br><br>
-     {{ patisserie.prix/100|number_format(2.2 , '.', '')  }}</p>
+     <p class="allergene"> {{ patisserie.allergene|raw }} <br><br>
+     {{ (patisserie.prix/100)|number_format(2 , '.', ',')  }}€</p>
 
         </div>
     </div>
     </div>
-
 
 
 {% endblock %}

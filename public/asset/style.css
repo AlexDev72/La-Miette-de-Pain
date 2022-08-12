@@ -2,9 +2,17 @@
 :root {
     --hauteur-menu: 60px;
 }
-ul{
-    background-color:#e4e1e1ea;
+
+.d-block{
+    border-radius:1em;}
+.carousel-item{
+    border-radius:1em;
 }
+.carousel-inner{
+    box-shadow: -1px 3px 10px  black;
+    border-radius:1em;
+}
+
 #fix{
     min-height: 100vh;
     display: grid;
@@ -14,13 +22,11 @@ ul{
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Kalam', cursive;
-}
-header{
-    display:grid;
-    grid-template-columns: auto 10% 10%;
 
 }
+/*#carouselExampleFade{*/
+/*    box-shadow: 0px 2px 1px black;*/
+/*}*/
 a{
     text-decoration:none;
     color:white;
@@ -30,169 +36,202 @@ h1 a{
     text-decoration: none;
     color: black;
 }
-
 .entete{
     margin-left:37%;
     padding: 2% 10% 2% 0%;
     font-size: 290%;
     font-family: 'BIZ UDMincho', serif;
     color: black;
-
 }
-@media screen and (min-width: 768px) {
-    #logo {
+
+
+.w-true100 {
+    width: 100vw !important;
+}
+
+
+@media screen and (min-width: 950px) {
+    header{
+        display:grid;
+        grid-template-columns: auto 10% 10%;
+
+    }
+    .logo {
         display: none;
     }
+    .w-true100 {
+        height: 600px!important;
+        object-fit: cover !important;
+        object-position: 0% 40% !important;
+    }
+    .image1{
+        width: 70%;}
 
-    @media screen and (max-width: 768px) {
-        h1 {
-            display: none;
-        }
-
-        #logo {
-            font-size: 650%;
-            text-align: center;
-            font-family: 'Damion', cursive;
-            color: #89d006;
-
-        }
     }
 
-    /* tout ce qui concerne le menu deroulant*/
-    nav {
-        width: 100%;
-        font-size: 18px;
-        position: sticky;
-        top: 0;
-        z-index: 2;
+
+@media screen and (max-width: 949px) {
+    header{
+        display:flex;
+        justify-content: space-evenly;
     }
 
-    nav ul {
-        list-style-type: none;
+    h1{
+        display: none !important;
     }
-
-    li a {
-        text-decoration: none;
-        color: black;
+    .d-grid{
+        display: block !important;
     }
-
-    .menu-deroulant > a:after {
-        content: "❯";
-        font-size: 15px;
-        margin-left: 7px;
-        display: inline-block;
+    .navun{
+        padding-right:20%;
     }
-    .sous-menu {
-        margin-top: var(--hauteur-menu);
-        width: 100%;
-        text-align: left;
-        background-color: white;
-        border-radius: 2px;
-        overflow: hidden;
-        max-height: 0;
+    .navbar-collapse{
+        padding-left:20%;
     }
-
-    /*l' expansive pour le menu déroulant
-      Pour les écran de plus de 768px*/
-
-    @media screen and (min-width: 768px) {
-        nav > ul > li {
-            background-color: white;
-            position: relative;
-            height: 100%;
-            flex: 1;
-        }
-
-        nav > ul > li > a {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        nav > ul {
-            display: flex;
-            text-align: center;
-            box-shadow: 0px 5px 3px 0px rgb(180 ,215, 57);
-            height: var(--hauteur-menu);
-        }
+    .texte{
+        font-size:75% !important;}
+    .deco{
+        margin-right: 20%
     }
-
-    /*Pour les écran de moins de 768px*/
-    @media screen and (max-width: 768px) {
-        ul {
-            display: flex;
-            flex-direction: column;
-        }
-        nav > ul > li {
-            padding-top: 5%;
-            padding-bottom: 20px;
-            background-color: white;
-            height: 100%;
-            flex: 1;
-        }
-
-        nav > ul > li > a {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        nav > ul {
-            display: flex;
-            text-align: center;
-            box-shadow: 0px 5px 3px 0px rgb(180 ,215, 57);
-        }
-    }
-    /*fin de l'expansive*/
+    .gateau{margin-left: 10%}
+}
 
 
+    /*!* tout ce qui concerne le menu deroulant*!*/
+    /*nav {*/
+    /*    width: 100%;*/
+    /*    font-size: 18px;*/
+    /*    position: sticky;*/
+    /*    top: 0;*/
+    /*    z-index: 2;*/
+    /*}*/
 
-    .sous-menu > li > a {
-        height: 50px;
-        padding-left: 20px;
-        width: 100%;
-        align-items: center;
-        display: flex;
-    }
-    nav > ul > li:hover > a {
-        color: #89d006;
+    /*nav ul {*/
+    /*    list-style-type: none;*/
+    /*}*/
 
-    }
-    .sous-menu > li:hover {
-        background-color: rgb(180 ,215, 57);
-    }
+    /*li a {*/
+    /*    text-decoration: none;*/
+    /*    color: black;*/
+    /*}*/
 
-    .sous-menu > li:hover > a {
-        color: black;
-    }
-    @keyframes rotationFleche {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(90deg);
-        }
-    }
-    .menu-deroulant:hover > a:after {
-        animation: rotationFleche 0.2s linear forwards;
-    }
-    @keyframes apparitionSousMenu {
-        0% {
-            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
-            border-top: 3px solid #89d006;
-        }
-        30% {
-            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-        }
-        100% {
-            max-height: 50em;
-            border-top: 3px solid #89d006;
-            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-        }
-    }
-    .menu-deroulant:hover > .sous-menu {
-        animation: apparitionSousMenu 1s forwards;
-    }
-    /*fin du menu deroulant*/
+    /*.menu-deroulant > a:after {*/
+    /*    content: "❯";*/
+    /*    font-size: 15px;*/
+    /*    margin-left: 7px;*/
+    /*    display: inline-block;*/
+    /*}*/
+    /*.sous-menu {*/
+    /*    margin-top: var(--hauteur-menu);*/
+    /*    width: 100%;*/
+    /*    text-align: left;*/
+    /*    background-color: white;*/
+    /*    border-radius: 2px;*/
+    /*    overflow: hidden;*/
+    /*    max-height: 0;*/
+    /*}*/
+
+    /*!*l' expansive pour le menu déroulant*/
+    /*  Pour les écran de plus de 768px*!*/
+
+    /*@media screen and (min-width: 768px) {*/
+    /*    nav > ul > li {*/
+    /*        background-color: white;*/
+    /*        position: relative;*/
+    /*        height: 100%;*/
+    /*        flex: 1;*/
+    /*    }*/
+
+    /*    nav > ul > li > a {*/
+    /*        position: absolute;*/
+    /*        top: 50%;*/
+    /*        left: 50%;*/
+    /*        transform: translate(-50%, -50%);*/
+    /*    }*/
+    /*    nav > ul {*/
+    /*        display: flex;*/
+    /*        text-align: center;*/
+    /*        box-shadow: 0px 5px 3px 0px rgb(180 ,215, 57);*/
+    /*        height: var(--hauteur-menu);*/
+    /*    }*/
+    /*}*/
+
+    /*!*Pour les écran de moins de 768px*!*/
+    /*@media screen and (max-width: 768px) {*/
+    /*    ul {*/
+    /*        display: flex;*/
+    /*        flex-direction: column;*/
+    /*    }*/
+    /*    nav > ul > li {*/
+    /*        padding-top: 5%;*/
+    /*        padding-bottom: 20px;*/
+    /*        background-color: white;*/
+    /*        height: 100%;*/
+    /*        flex: 1;*/
+    /*    }*/
+
+    /*    nav > ul > li > a {*/
+    /*        top: 50%;*/
+    /*        left: 50%;*/
+    /*        transform: translate(-50%, -50%);*/
+    /*    }*/
+    /*    nav > ul {*/
+    /*        display: flex;*/
+    /*        text-align: center;*/
+    /*        box-shadow: 0px 5px 3px 0px rgb(180 ,215, 57);*/
+    /*    }*/
+    /*}*/
+    /*!*fin de l'expansive*!*/
+
+
+
+    /*.sous-menu > li > a {*/
+    /*    height: 50px;*/
+    /*    padding-left: 20px;*/
+    /*    width: 100%;*/
+    /*    align-items: center;*/
+    /*    display: flex;*/
+    /*}*/
+    /*nav > ul > li:hover > a {*/
+    /*    color: #89d006;*/
+
+    /*}*/
+    /*.sous-menu > li:hover {*/
+    /*    background-color: rgb(180 ,215, 57);*/
+    /*}*/
+
+    /*.sous-menu > li:hover > a {*/
+    /*    color: black;*/
+    /*}*/
+    /*@keyframes rotationFleche {*/
+    /*    0% {*/
+    /*        transform: rotate(0deg);*/
+    /*    }*/
+    /*    100% {*/
+    /*        transform: rotate(90deg);*/
+    /*    }*/
+    /*}*/
+    /*.menu-deroulant:hover > a:after {*/
+    /*    animation: rotationFleche 0.2s linear forwards;*/
+    /*}*/
+    /*@keyframes apparitionSousMenu {*/
+    /*    0% {*/
+    /*        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);*/
+    /*        border-top: 3px solid #89d006;*/
+    /*    }*/
+    /*    30% {*/
+    /*        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);*/
+    /*    }*/
+    /*    100% {*/
+    /*        max-height: 50em;*/
+    /*        border-top: 3px solid #89d006;*/
+    /*        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);*/
+    /*    }*/
+    /*}*/
+    /*.menu-deroulant:hover > .sous-menu {*/
+    /*    animation: apparitionSousMenu 1s forwards;*/
+    /*}*/
+    /*!*fin du menu deroulant*!*/
 
     /*début du contenu*/
 
@@ -219,29 +258,27 @@ h1 a{
         color: white;
     }
     .description {
-        background-color: #613016c4;
+        box-shadow: -1px 3px 10px  black;
+        margin-top:5%;
+        border-radius:1em;
+        background-color: #3E1C09;
         padding: 0% 0% 5%;
         display: grid;
         grid-template-columns: auto auto;
         color: white;
         max-width: 100%;
-
     }
     .deco {
-        display: grid;
-        justify-content: center;
         padding-top: 8%;
         max-width: 100%;
     }
     .gateau {
-        display: grid;
-        justify-content: center;
         padding-top: 10%;
         max-width: 100%;
     }
     .texte {
         text-align: center;
-        padding-top: 5%;
+        padding: 3em 3em 1em 6em;
         font-size: 120%;
     }
     .selection {
@@ -255,8 +292,7 @@ h1 a{
     .image1{
         box-shadow: 5px 2px 10px black;
         max-width: 100%;
-        width: 70%;
-        margin-left: 21%;
+
     }
 
     .images {
@@ -308,9 +344,13 @@ h1 a{
 
 
     /*slider*/
+main{
+    background-color: #F1F1F1;
+}
     body {
         font-family: "arial", sans-serif;
         text-align: center;
+
     }
 
     #precedent,
@@ -346,19 +386,20 @@ h1 a{
         display: flex;
         align-items: center;
     }
-/*fin slider*/
+    /*fin slider*/
 
-   .btn{
-    background-color: rgb(180 ,215, 57) !important ;
-    border-color:rgb(180 ,215, 57) !important ;
+    .btn{
+        background-color: rgb(180 ,215, 57) !important ;
+        border-color:rgb(180 ,215, 57) !important ;
     }
     ol, ul{
         padding:0;
     }
     dl, ol, ul{
-    margin:0;}
+        margin:0;}
 }
 figcaption{
     font-size:200%;
 }
 p{margin:0rem;}
+

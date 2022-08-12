@@ -1,6 +1,6 @@
 .evenement{
-    background-color: #613016c4 !important;
-color:white;
+    background-color: #00000012!important;
+    color:white;
 }
 
 figure{
@@ -12,7 +12,10 @@ figure{
 }
 
 h3{
-    color: rgb(180 ,215, 57);
+   color:black;
     font-size:350%;
     padding-top:2%;
+}
+.texte2{
+    color:black;
 }

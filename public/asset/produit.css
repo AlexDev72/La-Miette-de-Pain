@@ -1,6 +1,6 @@
 
 .produit{
-    background-color:#e4e1e1ea;
+    background-color: #F1F1F1;
     padding: 5% 5% 15%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -8,17 +8,17 @@
     grid-row-gap:20%;
     grid-column-gap:5%;
 }
- .image:hover{
-     box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
-opacity:0.9;
- }
+.image:hover{
+    box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
+    opacity:0.9;
+}
 
 .nom {
     padding-top: 5%;
     font-size: 110%;
 }
 .item {
-    background-color:#e4e1e1ea;
+    background-color:#00000012;
     display: grid;
     padding-top: 5%;
     grid-template-columns: auto auto;
@@ -38,3 +38,4 @@ label{
 .align-items-center{
     padding-top:10%;
 }
+

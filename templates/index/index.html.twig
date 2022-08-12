@@ -5,27 +5,39 @@
 {% block body %}
 
     <main>
-
-        {#      <section id="slider">#}
-        {#      #}
-        {#          <img width=100px height=1000% src="./slider/slider.png" alt="La forêt de peupliers" id="slide">#}
-        {#          <div id="precedent" onclick="ChangeSlide(-1)"><</div>#}
-        {#          <div id="suivant" onclick="ChangeSlide(1)">></div>#}
-        {#     #}
-        {#         </section>#}
+<div class="container pt-5">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./slider/slider.png" class="d-block w-true100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./slider/mdp.png" class="d-block w-true100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./slider/vitrine.png" class="d-block w-true100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
         <section class="description">
-            <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
-                fugiat consequatur? <br> Nesciunt nisi odit neque illo magnam facilis odio libero eos sequi,
-                quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
+            <p class="texte text">Bienvenue sur le site La Miette de Pain, ici ous aurez accès à tous nos pâtisseries, viennoisseries, traiteur, ainsi que plusieurs gâteaux personnalisés pour vos fêtes, mariages, anniversaires...<br>
             </p>
             <figure class="deco">
-                <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
+                <img src="./slider/lmdp.png" alt="Lamiettedepain"class="image1">
             </figure>
             <figure class="gateau">
-                <img src="./slider/vitrine.png" alt="Lamiettedepain"class="image1">
+                <img src="./slider/slider.png" alt="Lamiettedepain"class="image1">
             </figure>
-            <p class="texte">
+            <p class="texte text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
                 Ipsum amet a adipisci perferendis, similique officiis magni doloremque nam, <br>
                 ad laborum exercitationem consectetur corrupti, esse quibusdam. Porro minus mollitia numquam in?
@@ -36,26 +48,27 @@
 
             <figure>
                 <img id="place"  src="./slider/mdp.png" alt="Lamiettedepain"class="images">
-                <figcaption>La miette de Pain</figcaption>
+                <figcaption class="text">La miette de Pain</figcaption>
             </figure>
 
             <figure>
                 <a href="{{ path ('patisserie_liste')}}"><img id="place" src="./slider/vitrine.png" alt="Nosproduits"class="images"></a>
-                <figcaption>Nos produits</figcaption>
+                <figcaption class="text">Nos produits</figcaption>
             </figure>
 
             <figure>
                 <img id="place"  src="./slider/gateau.png" alt="Evenement"class="images">
-                <figcaption>Évènement</figcaption>
+                <figcaption class="text">Évènement</figcaption>
             </figure>
 
             <figure>
                 <img id="place" src="./slider/slider.png" alt="Cadeau"class="images">
-                <figcaption>Nous rejoindres</figcaption>
+                <figcaption class="text">Nous rejoindres</figcaption>
             </figure>
 
         </div>
+</div>
     </main>
 
-    <script src="/asset/js.js" defer></script>
+
 {% endblock %}

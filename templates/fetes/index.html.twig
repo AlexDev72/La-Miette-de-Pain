@@ -1,4 +1,4 @@
-{% set fetes_liste = path('fetes_liste', {'id' : images[0]}) %}
+{% set fetes_liste = path('fetes_liste', {'id' : mariages[0]}) %}
 {% extends 'base.html.twig' %}
 {% block title %}La Miette de Pain{% endblock %}
 
@@ -9,9 +9,9 @@
             <figure class="deco">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        {%  for image in images %}
+                        {%  for mariage in mariages %}
                             <div class="carousel-item active">
-                                <img width=20% src="/upload/images/Slider/{{ image.image }}">
+                                <img width=20% src="/upload/images/Slider/fetes/{{ image.image }}">
                             </div>
                         {% endfor %}
                     </div>
