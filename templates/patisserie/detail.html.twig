@@ -7,19 +7,15 @@
 {% block body %}
     <div class="item">
 
-<div >
-            <img width= 600px height=500px src="/upload/images/Patisserie/{{ patisserie.image }}">
+       <div class="element">
+            <img class="image" width=85% height=100% src="/upload/images/Patisserie/{{ patisserie.image }}">
+       </div>
 
-</div>
-
-        <div class="titre">
-        <h2>{{ patisserie.name }}</h2>
-     <p class="allergene"> {{ patisserie.allergene|raw }} <br><br>
-     {{ (patisserie.prix/100)|number_format(2 , '.', ',')  }}€</p>
-
-        </div>
+       <div class="produit-description">
+            <h2>{{ patisserie.name }}</h2>
+               <div class="prix">  {{ (patisserie.prix/100)|number_format(2 , '.', ',')  }}€</div>
+               <div class="allergene"> {{ patisserie.allergene|raw }}</div>    
+       </div>
+ 
     </div>
-    </div>
-
-
 {% endblock %}

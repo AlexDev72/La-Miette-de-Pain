@@ -1,12 +1,9 @@
-{% set patisserie_liste = path('patisserie_liste', {'Slug' : patisserie}) %}
-
-
 {% block body %}
 
         <div class="container">
 
             <a href="{{ path ('patisserie_show', {'Slug':patisserie.Slug} )}}">
-                <img class="image" width= 100% height=100% src="upload/images/Patisserie/{{ patisserie.image }}">
+                <img class="image" width= 100% height=100% src="/upload/images/Patisserie/{{ patisserie.image }}">
             </a>
 
             <h2 class="nom">{{ patisserie.name }}</h2>

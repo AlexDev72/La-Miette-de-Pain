@@ -1,41 +1,58 @@
-
 .produit{
     background-color: #F1F1F1;
     padding: 5% 5% 15%;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
     max-width: 100%;
-    grid-row-gap:20%;
-    grid-column-gap:5%;
 }
+
+.element{
+    padding-left: 20%;
+}
+
+.allergene{
+    font-size: 50%;
+}
+
 .image:hover{
     box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
     opacity:0.9;
 }
 
 .nom {
+    text-align: center;
     padding-top: 5%;
     font-size: 110%;
 }
-.item {
-    background-color:#00000012;
-    display: grid;
-    padding-top: 5%;
-    grid-template-columns: auto auto;
-padding-bottom: 5%;
+
+.produit-description{
+    text-align: center;
 }
 
-.allergene{
-    margin-top:20%;
+.item {
+    background-color:#00000012;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
-.titre{
-    margin-right:60%;
+
+.prix{
+    font-size: 150%
 }
 label{
     padding-right:5%;
 }
 
-.align-items-center{
-    padding-top:10%;
+@media screen and (min-width: 950px) {
+
+    .produit{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-row-gap:20%;
+        grid-column-gap:5%;
+    }
+ 
+    .item {
+        display: grid;
+        grid-template-columns: 55% auto;
+        justify-items: start;
+    }
 }
 

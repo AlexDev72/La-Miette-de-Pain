@@ -22,21 +22,11 @@ class RegistrationFormType extends AbstractType
             ->add('username', TextType::class,[
                 "label" => "Nom d'utilisateur"
             ] )
-//            ->add('agreeTerms', CheckboxType::class, [
-//                'mapped' => false,
-//                'constraints' => [
-//                    new IsTrue([
-//                        'message' => 'You should agree to our terms.',
-//                    ]),
-//                ],
-//            ])
                 ->add('plainPassword', RepeatedType::class, [
                 'mapped' => false,
                 'type'=> PasswordType::class,
                 'first_options' =>['label' => 'Mot de passe'],
                 'second_options' =>['label' => 'Confirmer le mot de passe'],
-
-
 
                 'constraints' => [
                     new NotBlank([

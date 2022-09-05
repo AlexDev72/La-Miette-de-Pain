@@ -8,13 +8,15 @@
     <div class="item">
 
 
-        <div >
-            <img  width= 600px height=500px src="/upload/images/Viennoiserie/{{ viennoiserie.image }}">
+        <div class="element">
+            <img class="image" width= 85% height=100% src="/upload/images/Viennoiserie/{{ viennoiserie.image }}">
         </div>
-        <div >
-            <h2 class="titre">{{ viennoiserie.name }}</h2>
-            <p class="allergene"> {{ viennoiserie.allergene }}</p>
+        <div class="produit-description">
+            <h2>{{ viennoiserie.name }}</h2>
+            <div> {{ viennoiserie.allergene|raw }}</div>
+            <div>  {{ (viennoiserie.prix/100)|number_format(2 , '.', ',')  }}€</div>
+
         </div>
     </div>
-    </div>
+
 {% endblock %}

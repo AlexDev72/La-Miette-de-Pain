@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Contact;
 use App\Entity\mariage;
 use App\Entity\Patisserie;
 use App\Entity\Traiteur;
@@ -90,5 +91,11 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Voir les images', 'fas fa-eye', mariage::class)
 
         ]) ;
+
+        yield MenuItem::subMenu('message', 'fas fa-bar')->setSubItems([
+            MenuItem::linkToCrud('Voir les messages', 'fas fa-eye', contact::class)
+
+        ]) ;
+
     }
 }

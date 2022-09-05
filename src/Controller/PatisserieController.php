@@ -32,6 +32,4 @@ class PatisserieController extends AbstractController
         ]);
     }
 
-
-
 }

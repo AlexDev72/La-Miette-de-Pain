@@ -3,9 +3,7 @@
     color:white;
 }
 
-figure{
-    margin:0rem;
-}
+
 
 .carousel-item{
     width:auto;
@@ -13,9 +11,36 @@ figure{
 
 h3{
    color:black;
-    font-size:350%;
     padding-top:2%;
 }
 .texte2{
     color:black;
+}
+
+label{
+    display:grid;
+    padding:1% 0%;
+
+}
+
+.nameform{
+    margin:0%;
+}
+
+#contact_envoyer{
+    margin-top:2%;
+    background-color: rgb(180 ,215, 57) !important;
+    border-color: rgb(180 ,215, 57) !important;
+   padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color:white;
+}
+
+.propos{
+   background-color:#00000012!important
 }
