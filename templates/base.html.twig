@@ -2,6 +2,7 @@
 
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/asset/style.css" rel="stylesheet"/>
@@ -27,7 +28,26 @@
 <body>
 {% block header %}
 <header>
-
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#efefef",
+      "text": "#404040"
+    },
+    "button": {
+      "background": "#8ec760",
+      "text": "#ffffff"
+    }
+  },
+  "content": {
+    "message": "Politique de confidentialité\nLe site web lamiettedepain.fr est détenu par La Miette de Pain, qui est un contrôleur de données de vos données personnelles.\n\nNous avons adopté cette politique de confidentialité, qui détermine la manière dont nous traitons les informations collectées par lamiettedepain",
+    "dismiss": "Acceptez",
+    "link": "En savoir plus"
+  }
+});
+</script>
   <h1 class="entete">
     <a href="{{ path ('app_index')}}"> La Miette de Pain</a>
   </h1>
@@ -167,7 +187,7 @@
       <a href="{{ path ('viennoiserie_liste')}}" >Viennoiserie<br>
         <a href="{{ path ('traiteur_liste')}}" >Traiteur</a>
     </div>
-    <div class="">
+    <div>
       <p>
         <i class="fab fa-facebook-square">
           <a href="https://www.facebook.com/maisonbourgine">Facebook</a>
@@ -177,6 +197,9 @@
           Instagram
         </i>
       </p>
+    </div>
+    <div>
+    <a href="{{ path ('rgpd')}}">Mentions legales</a>
     </div>
 </footer>
 </body>

@@ -15,4 +15,12 @@ class IndexController extends AbstractController
             'controller_name' => 'La Miette de Pain',
         ]);
     }
+
+    #[Route('/rgpd', name: 'rgpd')]
+    public function show(): Response
+    {
+        return $this->render('Rgpd/rgpd.html.twig', [
+           
+        ]);
+    }
 }
