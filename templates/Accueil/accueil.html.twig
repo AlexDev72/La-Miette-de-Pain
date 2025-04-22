@@ -1,85 +1,146 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}La Miette de Pain{% endblock %}
+{% block title %}La Miette de Pain - Artisan Boulanger Pâtissier{% endblock %}
 
 {% block body %}
-    <main>
-      
-     {# <section id="slider"> 
-      
-          <img src="" alt="La forêt de peupliers" id="slide">
-          <div id="precedent" onclick="ChangeSlide(-1)"><</div>
-          <div id="suivant" onclick="ChangeSlide(1)">></div>
-     
-         </section> #}
+    <main class="pb-5">
+        <!-- Section Hero -->
+        <section class="hero-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">La Miette de Pain test</h1>
+                        <p class="lead mb-4">
+                            Découvrez l'authenticité d'un savoir-faire artisanal. Nos produits sont élaborés 
+                            avec passion et des ingrédients de qualité pour ravir vos papilles.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image rounded-4 overflow-hidden shadow-lg">
+                            <img src="#" alt="Notre boulangerie" class="img-fluid w-100" style="min-height: 300px; background: #f8f9fa;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <section class="description">
-        <p class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
-          fugiat consequatur? <br> Nesciunt nisi odit neque illo magnam facilis odio libero eos sequi,
-           quo animi,<br> tenetur, asperiores similique perspiciatis expedita dolore!
-          </p>
-        <figure class="deco">
-          <img src="#" alt="Lamiettedepain"class="image1">
-        </figure>
-        <figure class="gateau">
-        <img src="#" alt="Lamiettedepain"class="image1">  
-    </figure>
-    <p class="texte">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-      Ipsum amet a adipisci perferendis, similique officiis magni doloremque nam, <br>
-      ad laborum exercitationem consectetur corrupti, esse quibusdam. Porro minus mollitia numquam in?
-    </p>
-      </section>
+        <!-- Section Valeurs -->
+        <section class="values-section py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <div class="card-body p-4">
+                                <h2 class="h4 fw-bold mb-3">Notre Philosophie</h2>
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
+                                    Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus 
+                                    rhoncus ut eleifend nibh porttitor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <div class="card-body p-4">
+                                <h2 class="h4 fw-bold mb-3">Nos Engagements</h2>
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
+                                    Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus 
+                                    rhoncus ut eleifend nibh porttitor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="selection">
-       
-      <figure >
-        <img src="#" alt="Lamiettedepain"class="images">
-        <figcaption>La miette de Pain</figcaption>
-    </figure>
-
-    <figure id="Nossproduits" >
-        <a href="#"><img src="#" alt="Nosproduits"class="images"></a>
-        <figcaption>Nos produits</figcaption>
-    </figure>
-
-    <figure id="Evenement" >
-        <img src="#" alt="Evenement"class="images">
-        <figcaption>Évènement</figcaption>
-    </figure >
-
-    <figure id="Nousrejoindre" >
-        <img src="#" alt="Cadeau"class="images">
-        <figcaption>Nous rejoindres</figcaption>
-    </figure>
-  
-    </div>
+        <!-- Section Produits -->
+        <section class="products-section py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Découvrez nos créations</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden transition-all">
+                            <div class="product-image" style="height: 200px; background: #f8f9fa;"></div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 fw-bold mb-3">La miette de Pain</h3>
+                                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden transition-all">
+                            <div class="product-image" style="height: 200px; background: #f8f9fa;"></div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 fw-bold mb-3">Nos produits</h3>
+                                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Explorer</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden transition-all">
+                            <div class="product-image" style="height: 200px; background: #f8f9fa;"></div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 fw-bold mb-3">Évènements</h3>
+                                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Voir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden transition-all">
+                            <div class="product-image" style="height: 200px; background: #f8f9fa;"></div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 fw-bold mb-3">Nous rejoindre</h3>
+                                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-      <div class="grid-container">
-      
-        <div class="grid-item">
-        <p class="texte3"> 
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-         Autem laborum hic quisquam fuga, ipsa quia quasi suscipit <br>
-         incidunt laboriosam veniam modi et? Similique optio<br>
-          reprehenderit, quae beatae excepturi nesciunt. Repudiandae.
-        </p></div>
-    
-      <div class="grid-item3">
-        <h7>Catégories</h7><br><br>
-        <p >Pâtisserie<br>
-        Boulangerie<br>
-       Évènement</p>
-      </div>  
-      <div class="grid-item4">
-        <h7>En savoir plus</h7> <br><br>
-        <p >Qui somme nous?<br>
-         Nous contacter<br>
-         Notre histoire<br>
-         Plus d'info</p>
-      </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-4">À propos de nous</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
+                        Vivamus hendrerit arcu sed erat molestie vehicula.
+                    </p>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-4">Catégories</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Pâtisserie</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Boulangerie</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Évènements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-4">En savoir plus</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Qui sommes-nous ?</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nous contacter</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Notre histoire</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Plus d'infos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 pt-3 border-top border-secondary">
+                <p class="mb-0">© 2023 La Miette de Pain - Tous droits réservés</p>
+            </div>
+        </div>
     </footer>
-    <script src="/asset/js.js" defer></script>
 {% endblock %}
