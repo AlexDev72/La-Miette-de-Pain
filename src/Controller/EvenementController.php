@@ -22,7 +22,7 @@ class EvenementController extends AbstractController
     public function lister(MariageRepository $mariageRepository)
     {
         return $this->render('fetes/index.html.twig', [
-            'mariages' => $mariageRepository->findAll(),
+            'fetes' => $mariageRepository->findAll(),
         ]);
     }
 }

@@ -9,11 +9,11 @@
                   
                            <div class="container pt-5">
             <div id="slider">
-             {%  for mariage in mariages %}
-               <img class="imgslide" src="/upload/images/Slider/mariage/{{ mariage.image }}" id="slide1">
+             
+               <img class="imgslide" src="/upload/images/Slider/mariage/{{ mariages.image }}" id="slide1">
                <div id="precedent" onclick="ChangeSlide1(-1)"><</div>
                <div id="suivant" onclick="ChangeSlide1(1)">></div>
-               {% endfor %}
+             
             </div>
 
             <p class="texte2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
