@@ -1,0 +1,95 @@
+/* Conteneur principal */
+.produits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Carte de chaque produit */
+.produit-card {
+    width: 250px; /* Taille des cartes */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol */
+.produit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de la pâtisserie */
+.produit-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Description du produit */
+.produit-card .description {
+    padding: 15px;
+    text-align: center;
+}
+
+.produit-card .description h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.produit-card .description p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Prix */
+.produit-card .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+}
+/* Contenu interne de la carte */
+.patisserie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.patisserie-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom léger sur l’image au survol */
+.patisserie-image:hover {
+    transform: scale(1.03);
+}
+
+.patisserie-nom {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+.patisserie-prix {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745; /* Vert moderne */
+    background-color: #f2f2f2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 {% set patisserie_show = path('patisserie_show', {'Slug' : patisserie.Slug}) %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('asset/produit.css') }}">
+{% endblock %}
 {% block title %}FB - Pâtisserie {% endblock %}
 
 

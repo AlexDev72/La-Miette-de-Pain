@@ -1,14 +1,14 @@
 {% block body %}
 
-        <div class="container">
+       <div class="patisserie-item">
+    <a href="{{ path('patisserie_show', {'Slug': patisserie.Slug}) }}">
+        <img class="patisserie-image" src="/upload/images/Patisserie/{{ patisserie.image }}" alt="{{ patisserie.name }}">
+  
 
-            <a href="{{ path ('patisserie_show', {'Slug':patisserie.Slug} )}}">
-                <img class="image" width= 100% height=100% src="/upload/images/Patisserie/{{ patisserie.image }}">
-            </a>
-
-            <h2 class="nom">{{ patisserie.name }}</h2>
-
-        </div>
+    <h2 class="patisserie-nom">{{ patisserie.name }}</h2>
+    {% set prix = patisserie.prix / 100 %}
+    <p class="patisserie-prix">{{ prix }} €</p>  </a>
+</div>
 
 {% endblock %}
 

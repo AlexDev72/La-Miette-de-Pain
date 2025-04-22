@@ -3,6 +3,134 @@
   padding: 0px;
 }
 
+ /* Styles pour une répartition égale */
+ .navbar-nav {
+  width: 100%;
+}
+
+.nav-item {
+  flex: 1;
+  min-width: 0; /* Empêche le débordement */
+}
+
+.nav-link {
+  white-space: nowrap;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #89d006 !important;
+}
+
+/* Animation des dropdowns */
+@keyframes slideIn {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.dropdown-menu.animate {
+  animation: slideIn 0.3s ease forwards;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0 0 8px 8px;
+  margin-top: 0;
+  border-top: 2px solid #89d006;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #89d006;
+  padding-left: 2rem;
+}
+
+/* Style actif */
+.nav-link.active {
+  color: #89d006 !important;
+  font-weight: 600;
+}
+
+/* Style pour le header */
+header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.entete a {
+  font-family: 'BIZ UDMincho', serif;
+  color: #333;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.entete a:hover {
+  color: #89d006;
+}
+
+/* Style des boutons admin */
+.admin-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn-admin, .btn-logout {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-admin {
+  background-color: #6c757d;
+  color: white;
+  border: 2px solid #6c757d;
+}
+
+.btn-admin:hover {
+  background-color: transparent;
+  color: #6c757d;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid #dc3545;
+}
+
+.btn-logout:hover {
+  background-color: transparent;
+  color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header .container {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .admin-buttons {
+      margin-top: 1rem;
+  }
+  
+  .entete {
+      font-size: 1.5rem;
+  }
+}
+
 .d-block {
   border-radius: 1em;
 }
@@ -167,11 +295,11 @@ img {
 
 /*debut du bas de page*/
 .grid-container {
-  box-shadow: -1px -3px 20px 2px #89d006;
   background-color: black;
   text-align: center;
   padding: 2% 2%;
   color: white !important;
+  box-shadow: none !important; /* Ajout de cette ligne */
 }
 .grid-container a {
   color: #f1f1f1 !important;

@@ -1,18 +1,15 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('asset/patisserie.css') }}">
+{% endblock %}
 {% block title %}FB - Pâtisserie {% endblock %}
 {% block body %}
-
-    <div class="produit">
-    {% for patisserie in patisseries %}
-
-
-        {% include 'patisserie/item.html.twig' with { patisserie } %}
-
-
-
-    {% endfor %}
+    <div class="produits-container">
+        {% for patisserie in patisseries %}
+            <div class="produit-card">
+                {% include 'patisserie/item.html.twig' with { patisserie } %}
+            </div>
+        {% endfor %}
     </div>
-
 {% endblock %}
 

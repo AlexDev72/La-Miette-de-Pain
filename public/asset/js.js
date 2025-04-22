@@ -23,3 +23,12 @@ function ChangeSlide1(sens) {
 }
 setInterval("ChangeSlide1(1)", 10000);
 //fin slider//
+ // Ajout d'une ombre quand on scroll
+ window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
