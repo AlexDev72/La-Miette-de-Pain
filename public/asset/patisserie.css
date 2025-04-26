@@ -1,95 +1,113 @@
-/* Conteneur principal */
 .produits-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
-}
-
-/* Carte de chaque produit */
-.produit-card {
-    width: 250px; /* Taille des cartes */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Effet de survol */
-.produit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Image de la pâtisserie */
-.produit-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Description du produit */
-.produit-card .description {
     padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+     
+.page-title {
     text-align: center;
+    margin: 30px 0 40px;
+    position: relative;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.5px;
 }
 
-.produit-card .description h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.page-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(115, 215, 57), rgb(180 ,215, 57));
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
-
-.produit-card .description p {
-    font-size: 1rem;
-    color: #555;
-    margin: 10px 0;
-}
-
-/* Prix */
-.produit-card .price {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #28a745;
-    margin-top: 10px;
-}
-/* Contenu interne de la carte */
-.patisserie-item {
+.produit-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 15px;
+    height: 100%;
+}
+
+.produit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.patisserie-image-container {
+    height: 160px; /* Réduit la hauteur de l'image */
+    overflow: hidden;
+    position: relative;
 }
 
 .patisserie-image {
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
-/* Zoom léger sur l’image au survol */
-.patisserie-image:hover {
+.produit-card:hover .patisserie-image {
     transform: scale(1.03);
 }
 
-.patisserie-nom {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
+.patisserie-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
-.patisserie-prix {
-    margin-top: 5px;
+
+.patisserie-nom {
     font-size: 1rem;
-    font-weight: bold;
-    color: #28a745; /* Vert moderne */
-    background-color: #f2f2f2;
-    padding: 6px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #333;
+    line-height: 1.3;
+}
+
+.patisserie-prix {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgb(115, 215, 57);
+    margin-top: auto;
+}
+
+.patisserie-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Version mobile */
+@media (max-width: 600px) {
+    .produits-container {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    .page-title {
+        font-size: 1.8rem;
+        margin: 20px 0 30px;
+    }
+    .patisserie-image-container {
+        height: 120px;
+    }
+    
+    .patisserie-nom {
+        font-size: 0.9rem;
+    }
+    
+    .patisserie-prix {
+        font-size: 1rem;
+    }
 }

@@ -1,14 +1,15 @@
 {% block body %}
-
-       <div class="patisserie-item">
-    <a href="{{ path('patisserie_show', {'Slug': patisserie.Slug}) }}">
-        <img class="patisserie-image" src="/upload/images/Patisserie/{{ patisserie.image }}" alt="{{ patisserie.name }}">
-  
-
-    <h2 class="patisserie-nom">{{ patisserie.name }}</h2>
-    {% set prix = patisserie.prix / 100 %}
-    <p class="patisserie-prix">{{ prix }} €</p>  </a>
-</div>
-
+  <div class="produit-card">
+                <a href="{{ path('patisserie_show', {'Slug': patisserie.Slug}) }}" class="patisserie-link">
+                    <div class="patisserie-image-container">
+                        <img class="patisserie-image" src="/upload/images/Patisserie/{{ patisserie.image }}" alt="{{ patisserie.name }}" loading="lazy">
+                    </div>
+                    <div class="patisserie-content">
+                        <h2 class="patisserie-nom">{{ patisserie.name }}</h2>
+                        {% set prix = patisserie.prix / 100 %}
+                        <p class="patisserie-prix">{{ prix|number_format(2, ',', ' ') }} €</p>
+                    </div>
+                </a>
+            </div>
 {% endblock %}
 
