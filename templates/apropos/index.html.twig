@@ -1,23 +1,95 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AproposController!{% endblock %}
+{% block title %}À propos - La Miette de Pain{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('asset/apropos.css') }}">
+{% endblock %}
 
 {% block body %}
-<div class="container propos">
-<p>Nous vous présentons ‘’La miette de pain ‘’, notre boulangerie pâtisserie artisanale située 101 grand
-rue 72460 Savigné l’évêque depuis le 1er décembre 2006
-Nous vous proposons notre gamme de pain fabriquée avec une farine ‘TERROIR’, elle est élaborée
-en majorité de blé issu de nos agriculteur sarthois
-Notre gamme de pâtisserie (individuelle ou à partager) ainsi que toutes nos viennoiseries sont
-fabriquées exclusivement ‘’ PUR BEURRE’’
-Pour la pause déjeuner nous vous proposons notre gamme de snacking.
-Pour vos baptèmes,anniversaire ou autre fête entre famille ou amis nous avons un large choix de
-pièce montée, weeding cake ,number cake ou autre entremet
+<section class="about-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Notre histoire</h1>
+        <p>Artisans boulangers-pâtissiers depuis 2006</p>
+    </div>
+</section>
 
-Nous avons aussi il y a quelques année, mis à disposition de nos clients deux distributeurs à
-baguettes situées dans les communes de Joué l ‘abbé et Courcebœufs, communes limitrophes de
-Savigné l’évêque
-Elles vous proposent des baguettes blanches (moulées ou ordinaires) ainsi que des baguettes
-traditions, nous la remplissons tous les jours sauf le lundi étant notre jour de fermeture</p>
+<div class="about-container">
+    <div class="about-section">
+        <div class="about-text">
+            <h2>La Miette de Pain</h2>
+            <div class="divider"></div>
+            <p class="lead">Notre boulangerie-pâtisserie artisanale vous accueille au 101 Grand Rue à Savigné-l'Évêque depuis le 1er décembre 2006.</p>
+            
+            <div class="about-features">
+                <div class="feature">
+                    <i class="fas fa-wheat-alt"></i>
+                    <h3>Farine Terroir</h3>
+                    <p>Nos pains sont fabriqués avec une farine élaborée à partir de blé issu des agriculteurs sarthois.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Pur Beurre</h3>
+                    <p>Toutes nos pâtisseries et viennoiseries sont fabriquées exclusivement avec du pur beurre.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>Snacking</h3>
+                    <p>Pour votre pause déjeuner, découvrez notre gamme de snacking fait maison.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="{{ asset('image/lmdp.png') }}" alt="Boulangerie La Miette de Pain" class="img-fluid">
+        </div>
+    </div>
+    
+    <div class="celebration-section">
+        <h2>Vos célébrations</h2>
+        <p>Pour vos baptêmes, anniversaires ou autres fêtes en famille ou entre amis, nous proposons :</p>
+        <div class="celebration-items">
+            <span>Pièces montées</span>
+            <span>Wedding cakes</span>
+            <span>Number cakes</span>
+            <span>Entremets</span>
+        </div>
+    </div>
+    
+    <div class="distributors-section">
+        <div class="distributors-image">
+            <img src="{{ asset('image/distri.jpg') }}" alt="Distributeur à baguettes" class="img-fluid">
+        </div>
+        <div class="distributors-text">
+            <h2>Nos distributeurs automatiques</h2>
+            <p>Nous mettons à votre disposition deux distributeurs à baguettes dans les communes limitrophes :</p>
+            <ul>
+                <li><strong>Joué-l'Abbé</strong></li>
+                <li><strong>Courcebœufs</strong></li>
+            </ul>
+            <p>Ils proposent des baguettes blanches (moulées ou ordinaires) ainsi que des baguettes tradition.</p>
+            <p class="note">Service quotidien (sauf le lundi, jour de fermeture)</p>
+        </div>
+    </div>
 </div>
+
+<section class="team-section">
+    <h2>Rencontrez nos artisans</h2>
+    <p>Passionnés par leur métier, ils mettent tout leur savoir-faire dans chaque création.</p>
+    <div class="team-grid">
+        <div class="team-member">
+            <div class="member-photo"></div>
+            <h3>Boulanger</h3>
+            <p>Spécialiste du pain au levain</p>
+        </div>
+        <div class="team-member">
+            <div class="member-photo"></div>
+            <h3>Pâtissier</h3>
+            <p>Créateur de douceurs</p>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -1,0 +1,313 @@
+/* Apropos.css */
+.about-hero {
+    height: 60vh;
+    background: url('../image/vitrinepatisserie2.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-section {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #8B5A2B;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background: #D4A76A;
+    margin: 1.5rem 0;
+}
+
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #FFF9F0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #D4A76A;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #8B5A2B;
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.celebration-section {
+    background: #FFF9F0;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+    border-radius: 10px;
+}
+
+.celebration-section h2 {
+    font-size: 2rem;
+    color: #8B5A2B;
+    margin-bottom: 1rem;
+}
+
+.celebration-section p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #666;
+}
+
+.celebration-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.celebration-items span {
+    background: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #8B5A2B;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.distributors-section {
+    display: flex;
+    gap: 4rem;
+    margin: 5rem 0;
+    align-items: center;
+}
+
+.distributors-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.distributors-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.distributors-text {
+    flex: 1;
+}
+
+.distributors-text h2 {
+    font-size: 2rem;
+    color: #8B5A2B;
+    margin-bottom: 1.5rem;
+}
+
+.distributors-text p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.distributors-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.distributors-text li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #666;
+}
+
+.distributors-text li:before {
+    content: "•";
+    color: #D4A76A;
+    position: absolute;
+    left: 0;
+}
+
+.distributors-text .note {
+    font-style: italic;
+    color: #999;
+}
+
+.team-section {
+    background:  #3E2723;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.team-section p {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    color: #333;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 auto 1.5rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #8B5A2B;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section, .distributors-section {
+        flex-direction: column;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .celebration-items {
+        gap: 1rem;
+    }
+    
+    .celebration-items span {
+        padding: 0.6rem 1.2rem;
+    }
+}
