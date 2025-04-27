@@ -1,13 +1,22 @@
 {% extends 'base.html.twig' %}
-{% block title %}FB - Viennoiserie {% endblock %}
-{% block body %}
 
-<div class="produit">
-
-    {% for viennoiserie in viennoiseries %}
-
-        {% include 'viennoiserie/item.html.twig' with { viennoiserie } %}
-    {% endfor %}
-</div>
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('asset/viennoiserie.css') }}">
 {% endblock %}
 
+{% block title %}FB - Viennoiserie
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="page-title">Nos Viennoiseries</h1>
+	<div class="produit">
+		<div class="produits-container">
+			{% for viennoiserie in viennoiseries %}
+
+				{% include 'viennoiserie/item.html.twig' with { viennoiserie } %}
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}

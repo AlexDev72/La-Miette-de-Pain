@@ -2,16 +2,19 @@
 
 
 {% block body %}
-    <div class="container">
+    <div class="produit-card">
 
         <a href="{{ path ('viennoiserie_show', {'Slug':viennoiserie.Slug} )}}">
+         <div class="viennoiserie-image-container">
             <img class="image" width= 100% height=100% src="upload/images/Viennoiserie/{{ viennoiserie.image }}">
+       </div> 
+       
+        <div class="viennoiserie-content">
+            <h2 class="nom">{{ viennoiserie.name }}</h2>
+                {% set prix = viennoiserie.prix / 100 %}
+                <p class="viennoiserie-prix">{{ prix|number_format(2, ',', ' ') }} €</p>
+        </div>
         </a>
-
-        <h2 class="nom">{{ viennoiserie.name }}</h2>
-
     </div>
-
-
 
 {% endblock %}

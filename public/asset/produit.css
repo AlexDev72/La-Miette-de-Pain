@@ -1,58 +1,147 @@
-.produit{
-    background-color: #F1F1F1;
-    padding: 5% 5% 15%;
-    max-width: 100%;
+/* Produit.css */
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    gap: 3rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.element{
-    padding-left: 20%;
+.product-gallery {
+    flex: 1;
 }
 
-.allergene{
-    font-size: 50%;
+.main-image {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.image:hover{
-    box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
-    opacity:0.9;
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.nom {
-    text-align: center;
-    padding-top: 5%;
-    font-size: 110%;
+.product-image:hover {
+    transform: scale(1.02);
 }
 
-.produit-description{
-    text-align: center;
+.image-thumbnails {
+    display: flex;
+    gap: 1rem;
 }
 
-.item {
-    background-color:#00000012;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.prix{
-    font-size: 150%
-}
-label{
-    padding-right:5%;
+.thumbnail:hover, .thumbnail.active {
+    border-color: rgb(180 ,215, 57);
+    transform: scale(1.05);
 }
 
-@media screen and (min-width: 950px) {
+.product-details {
+    flex: 1;
+}
 
-    .produit{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-row-gap:20%;
-        grid-column-gap:5%;
+.product-title {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.price-section {
+    margin: 1.5rem 0;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    color:rgb(180 ,215, 57);
+    font-weight: 700;
+}
+
+.product-description, .allergens-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.allergens-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.allergens-tags span {
+    display: inline-block;
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.product-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.meta-item i {
+    color:rgb(180 ,215, 57);
+}
+
+.related-products {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.related-products h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        padding: 1rem;
     }
- 
-    .item {
-        display: grid;
-        grid-template-columns: 55% auto;
-        justify-items: start;
-    }
-}
 
+}

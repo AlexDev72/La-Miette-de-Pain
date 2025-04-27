@@ -1,22 +1,57 @@
 {% extends 'base.html.twig' %}
 {% set viennoiserie_show = path('viennoiserie_show', {'Slug' : viennoiserie.Slug}) %}
 
-{% block title %}FB - Viennoiserie {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('asset/produit.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block title %}FB - Viennoiserie
+{% endblock %}
 
 
 {% block body %}
-    <div class="item">
+	<div class="product-container">
+		<div class="product-gallery">
+			<div class="main-image">
+				<img class="product-image" src="/upload/images/Viennoiserie/{{ viennoiserie.image }}">
+			</div>
+                <div class="image-thumbnails">
+					<div class="thumbnail active" style="background-image: url('/upload/images/Viennoiserie/{{ viennoiserie.image }}')"></div>
+				</div>
+			</div>
 
 
-        <div class="element">
-            <img class="image" width= 85% height=100% src="/upload/images/Viennoiserie/{{ viennoiserie.image }}">
-        </div>
-        <div class="produit-description">
-            <h2>{{ viennoiserie.name }}</h2>
-            <div> {{ viennoiserie.allergene|raw }}</div>
-            <div>  {{ (viennoiserie.prix/100)|number_format(2 , '.', ',')  }}€</div>
+		<div class="product-details">
+			<h1 class="product-title">{{ viennoiserie.name }}</h1>
 
-        </div>
-    </div>
+			<div class="price-section">
+				<span class="current-price">
+					{{ (viennoiserie.prix/100)|number_format(2 , '.', ',')  }}€</span>
+			</div>
+
+			<div class="product-description">
+				<p>{{ viennoiserie.description|default('Délicieuse viennoiserie artisanale préparée avec soin par nos chefs.')|raw }}</p>
+			</div>
+
+			<div class="allergens-section">
+				<h3>Allergènes</h3>
+				<div class="allergens-tags">
+					{{ viennoiserie.allergene|raw }}
+				</div>
+			</div>
+
+			<div class="product-meta">
+				<div class="meta-item">
+					<i class="fas fa-shield-alt"></i>
+					<span>Produit artisanal</span>
+				</div>
+				<div class="meta-item">
+					<i class="fas fa-leaf"></i>
+					<span>Ingrédients frais</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}

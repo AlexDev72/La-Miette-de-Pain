@@ -1,23 +1,53 @@
 {% extends 'base.html.twig' %}
 {% set patisserie_show = path('patisserie_show', {'Slug' : patisserie.Slug}) %}
+
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('asset/produit.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 {% endblock %}
-{% block title %}FB - Pâtisserie {% endblock %}
 
+{% block title %}FB - {{ patisserie.name }}{% endblock %}
 
 {% block body %}
-    <div class="item">
+    <div class="product-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="/upload/images/Patisserie/{{ patisserie.image }}" alt="{{ patisserie.name }}" class="product-image">
+            </div>
+            <div class="image-thumbnails">
+                <div class="thumbnail active" style="background-image: url('/upload/images/Patisserie/{{ patisserie.image }}')"></div>
+            </div>
+        </div>
 
-       <div class="element">
-            <img class="image" width=85% height=100% src="/upload/images/Patisserie/{{ patisserie.image }}">
-       </div>
+        <div class="product-details">
+            <h1 class="product-title">{{ patisserie.name }}</h1>
+            
+            <div class="price-section">
+                <span class="current-price">{{ (patisserie.prix/100)|number_format(2, '.', ',') }}€</span>
+            </div>
+            
+            <div class="product-description">
+                <p>{{ patisserie.description|default('Délicieuse pâtisserie artisanale préparée avec soin par nos chefs.')|raw }}</p>
+            </div>
+            
+            <div class="allergens-section">
+                <h3>Allergènes</h3>
+                <div class="allergens-tags">
+                    {{ patisserie.allergene|raw }}
+                </div>
+            </div>
 
-       <div class="produit-description">
-            <h2>{{ patisserie.name }}</h2>
-               <div class="prix">  {{ (patisserie.prix/100)|number_format(2 , '.', ',')  }}€</div>
-               <div class="allergene"> {{ patisserie.allergene|raw }}</div>    
-       </div>
- 
+            <div class="product-meta">
+                <div class="meta-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Produit artisanal</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-leaf"></i>
+                    <span>Ingrédients frais</span>
+                </div>
+            </div>
+        </div>
     </div>
+
 {% endblock %}
